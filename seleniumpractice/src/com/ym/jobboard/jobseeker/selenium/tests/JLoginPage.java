@@ -5,7 +5,7 @@ import com.ym.jobboard.common.Driver;
 public class JLoginPage {
 	
 	public static void GoTo() {
-		Driver.getDriver().get("http://www.careerwebsite.com/jobseeker/login/?site_id=22615");
+		Driver.getDriver().get("test");
 	}
 	
 	public static LoginCommand LoginAs(String username) {
