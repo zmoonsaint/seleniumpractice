@@ -4,8 +4,10 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 
 import com.ym.jobboard.common.Driver;
+import com.ym.jobboard.common.JCheckpointXPath;
 
 public class LoginCommand {
 	private String username;
@@ -21,7 +23,9 @@ public class LoginCommand {
 	}
 	
 	public void Login() {
+		
 		System.out.println("Login");
+		
 		WebElement inputUsername = Driver.getDriver().findElement(By.xpath("//*[@id=\'jt_login\']/section/fieldset[1]/input"));
 		inputUsername.sendKeys(username);
 
@@ -31,6 +35,8 @@ public class LoginCommand {
 		WebElement btnLogin = Driver.getDriver().findElement(By.xpath("//*[@id=\'login-button\']"));
 		btnLogin.click();
 		
+		Assert.assertTrue(Driver.getDriver().findElement(By.xpath(JCheckpointXPath.MAIN_PAGE_TITLE.getJCheckpointXPath())).getText().equals("My Account"), "My Account Page is not being displayed.");
+
 	}
 	
 	public static void Logout() {

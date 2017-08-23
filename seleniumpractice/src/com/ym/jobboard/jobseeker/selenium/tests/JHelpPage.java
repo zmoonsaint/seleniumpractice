@@ -26,4 +26,8 @@ public class JHelpPage {
 
 	}
 	
+	public static JCreateSupportTicket CreateSupportTicket(String topic) {
+		return new JCreateSupportTicket(topic);
+	}
+	
 }
