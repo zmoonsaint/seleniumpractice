@@ -8,21 +8,22 @@ import com.ym.jobboard.common.Driver;
 import com.ym.jobboard.common.JCheckpointXPath;
 import com.ym.jobboard.common.JNavXPath;
 
-public class JJobSearchPage {
+public class JHelpPage {
 	
 	public static void GoTo() {
 		
-		System.out.println("JJobSearchPage");
+		System.out.println("JHelpPage");
 		
 		System.out.println("1 " + JNavXPath.JOBSEEKER.getJNavXpath());
 		WebElement navJobSeeker = Driver.getDriver().findElement(By.xpath(JNavXPath.JOBSEEKER.getJNavXpath()));
 		navJobSeeker.click();
 		
-		System.out.println("2 " + JNavXPath.JOB_SEARCH.getJNavXpath());
-		WebElement navJMyAccount = Driver.getDriver().findElement(By.xpath(JNavXPath.JOB_SEARCH.getJNavXpath()));
+		System.out.println("2 " + JNavXPath.HELP.getJNavXpath());
+		WebElement navJMyAccount = Driver.getDriver().findElement(By.xpath(JNavXPath.HELP.getJNavXpath()));
 		navJMyAccount.click();
 		
-		Assert.assertTrue(Driver.getDriver().findElement(By.xpath(JCheckpointXPath.BREADCRUMBS.getJCheckpointXPath())).getText().equals("Job Search"), "Job Search Page is not being displayed.");
+		Assert.assertTrue(Driver.getDriver().findElement(By.xpath(JCheckpointXPath.HELP.getJCheckpointXPath())).getText().equals("Job Seeker Support Center"), "Job Search Page is not being displayed.");
 
 	}
+	
 }

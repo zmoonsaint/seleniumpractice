@@ -8,7 +8,7 @@ import com.ym.jobboard.common.Driver;
 import com.ym.jobboard.common.JCheckpointXPath;
 import com.ym.jobboard.common.JNavXPath;
 
-public class JManageResumes {
+public class JManageResumesPage {
 	
 	public static void GoTo() {
 		
@@ -22,7 +22,7 @@ public class JManageResumes {
 		WebElement navJMyAccount = Driver.getDriver().findElement(By.xpath(JNavXPath.MANAGE_RESUMES.getJNavXpath()));
 		navJMyAccount.click();
 		
-		Assert.assertTrue(Driver.getDriver().findElement(By.xpath(JCheckpointXPath.MAIN_PAGE_TITLE.getJCheckpointXPath())).getText().equals("My Account"), "My Account Page is not being displayed.");
+		Assert.assertTrue(Driver.getDriver().findElement(By.xpath(JCheckpointXPath.MAIN_PAGE_TITLE.getJCheckpointXPath())).getText().equals("Ceevees / Cover Letters"), "Manage Resumes Page is not being displayed.");
 
 	}
 }

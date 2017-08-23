@@ -30,8 +30,23 @@ public class JNavigationTests {
 	
 	@Test
 	protected void jobseeker_Can_Navigate_To_ManageResumes() {
-		JManageResumes.GoTo();
-	}		
+		JManageResumesPage.GoTo();
+	}
+	
+	@Test
+	protected void jobseeker_Can_Navigate_To_JobAlerts() {
+		JJobAlertsPage.GoTo();
+	}	
+	
+	@Test
+	protected void jobseeker_Can_Navigate_To_Resources() {
+		JResourcesPage.GoTo();
+	}	
+	
+	@Test
+	protected void jobseeker_Can_Navigate_To_Help() {
+		JHelpPage.GoTo();
+	}	
 	
 	@AfterTest
 	protected void afterTest() {

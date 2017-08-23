@@ -2,8 +2,9 @@ package com.ym.jobboard.common;
 
 public enum JCheckpointXPath {
 	MAIN_PAGE_TITLE("//*[@id=\'main-content\']/div[3]/h1"),
-	JOB_SEARCH("//*[@id=\'main-content\']/div/div[1]/ol/li[2]/text()");
-	
+	BREADCRUMBS("//*[@id=\'main-content\']/div/div[1]/ol/li[2]"),
+	JOB_ALERTS("//*[@id=\'main-content\']/div[2]/section[1]/h1"),
+	HELP("//*[@id='main-content']/div[2]/h1");
 	
 	private final String jCheckpointXPath;
 	
